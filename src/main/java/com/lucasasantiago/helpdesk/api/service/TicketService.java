@@ -19,7 +19,7 @@ public interface TicketService {
 
 	ChangeStatusEntity createChangeStatus(ChangeStatusEntity changeStatus);
 
-	Iterable<ChangeStatusEntity> listChangeStatus();
+	Iterable<ChangeStatusEntity> listChangeStatus(String ticketId);
 
 	Page<TicketEntity> findByCurrentUser(int page, int count, String userId);
 
@@ -32,5 +32,5 @@ public interface TicketService {
 	
 	Iterable<TicketEntity> findAll();
 	
-	Page<TicketEntity> findByParameterAndAssignedUser(int page, int count, String title, String status, String priority, String assignedUser);
+	Page<TicketEntity> findByParameterAndAssignedUser(int page, int count, String title, String status, String priority, String assignedUserId);
 }
